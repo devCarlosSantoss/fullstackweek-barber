@@ -1,6 +1,7 @@
 import { format, parse } from "date-fns";
 import { ptBR } from "date-fns/locale/pt-BR";
 import Header from "../_components/header";
+import Search from "./_components/search";
 
 const Home = () => {
   const dataAtual = new Date();
@@ -12,8 +13,11 @@ const Home = () => {
     <div>
       <Header />
       <div className="px-5 pt-5">
-          <h2 className="text-xl font-bold ">Olá, Carlos</h2>
-          <p className="capitalize text-sm">{dataFormatada}</p>
+        <h2 className="text-xl font-bold ">Olá, Carlos</h2>
+        <p className="capitalize text-sm">{dataFormatada}</p>
+      </div>
+      <div className="px-5 mt-6">
+        <Search />
       </div>
     </div>
   );
